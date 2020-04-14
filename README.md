@@ -2,7 +2,7 @@
 This is the PHP (backend) repo for our project.
 
 
-Max Meacham
+
 
 
 
@@ -13,3 +13,4 @@ Contributors:
 
 - Courtney Zavaleta
 
+- Max Meacham
