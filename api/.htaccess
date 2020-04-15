@@ -15,6 +15,3 @@ RewriteRule ^quizzes/([0-9]+)$ controllers/quizzes.php?action=update&id=$1
 
 RewriteCond %{REQUEST_METHOD} ^DELETE$
 RewriteRule ^quizzes/([0-9]+)$ controllers/quizzes.php?action=delete&id=$1
-
-
-This is a test addition.
