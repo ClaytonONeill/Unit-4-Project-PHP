@@ -36,14 +36,38 @@ if ($_REQUEST['action'] === 'index') {
   echo json_encode($all_quizzes);
 }
 
+else if ($_REQUEST['action'] === 'update'){
+  $request_body = file_get_contents('php://input');
+  $body_object = json_decode($request_body);
+  $updated_quiz = new Quiz($_REQUEST['id'],
+    $body_object->quiztitle,
+    $body_object->category,
+    $body_object->question1,
+    $body_object->answer1,
+    $body_object->wronganswer1a,
+    $body_object->wronganswer1b,
+    $body_object->question2,
+    $body_object->answer2,
+    $body_object->wronganswer2a,
+    $body_object->wronganswer2b,
+    $body_object->question3,
+    $body_object->answer3,
+    $body_object->wronganswer3a,
+    $body_object->wronganswer3b,
+    $body_object->question4,
+    $body_object->answer4,
+    $body_object->wronganswer4a,
+    $body_object->wronganswer4b,
+    $body_object->question5,
+    $body_object->answer5,
+    $body_object->wronganswer5a,
+    $body_object->wronganswer5b
+  );
 
-// else if ($_REQUEST['action'] === 'update'){
-//   $request_body = file_get_contents('php://input');
-//   $body_object = json_decode($request_body);
-//   $updated_post = new Post($_REQUEST['id'], $body_object->name, $body_object->image, $body_object->body);
-//   $all_posts = Posts::update($updated_post);
-//   echo json_encode($all_posts);
-  // }
+  $all_quizzes = Quizzes::update($updated_quiz);
+  echo json_encode($all_quizzes);
+  }
+
   else if ($_REQUEST['action'] === 'delete') {
     $all_quizzes = Quizzes::delete($_REQUEST['id']);
     echo json_encode($all_quizzes);

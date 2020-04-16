@@ -128,11 +128,48 @@ class Quizzes {
     return self::all();
   }
 
+  static function update($updated_quiz){
+      $query = "UPDATE allquizzes SET quiztitle = $1
+      , category = $2, question1 = $3, answer1 = $4, wronganswer1a = $5, wronganswer1b =$6, question2 = $7, answer2 = $8, wronganswer2a = $9, wronganswer2b = $10, question3 = $11, answer3 = $12, wronganswer3a = $13, wronganswer3b = $14, question4 = $15, answer4 = $16, wronganswer4a = $17, wronganswer4b = $18, question5 = $19,
+      answer5 = $20, wronganswer5a = $21,
+      wronganswer5b =$22
+      WHERE id = $23";
+      $query_params = array(
+        $updated_quiz->title,
+      $updated_quiz->category,
+      $updated_quiz->question1,
+      $updated_quiz->answer1,
+      $updated_quiz->wronganswer1a,
+      $updated_quiz->wronganswer1b,
+      $updated_quiz->question2,
+      $updated_quiz->answer2,
+      $updated_quiz->wronganswer2a,
+      $updated_quiz->wronganswer2b,
+      $updated_quiz->question3,
+      $updated_quiz->answer3,
+      $updated_quiz->wronganswer3a,
+      $updated_quiz->wronganswer3b,
+      $updated_quiz->question4,
+      $updated_quiz->answer4,
+      $updated_quiz->wronganswer4a,
+      $updated_quiz->wronganswer4b,
+      $updated_quiz->question5,
+      $updated_quiz->answer5,
+      $updated_quiz->wronganswer5a,
+      $updated_quiz->wronganswer5b,
+      $updated_quiz->id);
+
+      $results = pg_query_params($query, $query_params);
+
+      return self::all();
+    }
+
+
 
   static function delete($id){
         $query = "DELETE FROM allquizzes WHERE id = $1";
         $query_params = array($id);
-        $result = pg_query_params($query, $query_params);
+        $results = pg_query_params($query, $query_params);
 
         return self::all();
       }
