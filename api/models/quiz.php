@@ -116,7 +116,7 @@ class Quizzes {
 
   static function create($quiz){
     $query = "INSERT INTO allquizzes (quiztitle, category, question1, answer1, wronganswer1a, wronganswer1b, question2, answer2, wronganswer2a, wronganswer2b, question3, answer3, wronganswer3a, wronganswer3b, question4, answer4, wronganswer4a, wronganswer4b, question5, answer5, wronganswer5a, wronganswer5b) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)";
-    $query_params = array($quiz->quiztitle, $quiz->category, $quiz->question1, $quiz->answer1, $quiz->wronganswer1a, $quiz->wronganswer1b, $quiz->question2, $quiz->answer2, $quiz->wronganswer2a, $quiz->wronganswer2b, $quiz->question3, $quiz->answer3, $quiz->wronganswer3a, $quiz->wronganswer3b, $body_objec->question4,
+    $query_params = array($quiz->quiztitle, $quiz->category, $quiz->question1, $quiz->answer1, $quiz->wronganswer1a, $quiz->wronganswer1b, $quiz->question2, $quiz->answer2, $quiz->wronganswer2a, $quiz->wronganswer2b, $quiz->question3, $quiz->answer3, $quiz->wronganswer3a, $quiz->wronganswer3b, $quiz->question4,
       $quiz->answer4,
       $quiz->wronganswer4a,
       $quiz->wronganswer4b,
