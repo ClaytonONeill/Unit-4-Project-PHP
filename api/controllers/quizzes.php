@@ -65,7 +65,7 @@ else if ($_REQUEST['action'] === 'update'){
   );
 
   $all_quizzes = Quizzes::update($updated_quiz);
-  echo json_encode($all_quizzes);
+    echo json_encode($all_quizzes);
   }
 
   else if ($_REQUEST['action'] === 'delete') {
