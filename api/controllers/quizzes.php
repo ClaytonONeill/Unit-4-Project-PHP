@@ -5,7 +5,12 @@ header('Content-Type: application/json');
 if ($_REQUEST['action'] === 'index') {
   echo json_encode(Quizzes::all());
   // echo 'test';
-} elseif ($_REQUEST['action'] === 'post') {
+}
+else if ($_REQUEST['action'] === 'show'){
+  $show_quiz = Quizzes::show($_REQUEST['id']);
+      echo json_encode($show_quiz);
+  }
+elseif ($_REQUEST['action'] === 'post') {
   $request_body = file_get_contents('php://input');
   $body_object = json_decode($request_body);
   $new_quiz = new Quiz(null,
