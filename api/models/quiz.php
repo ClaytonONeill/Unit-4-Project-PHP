@@ -135,7 +135,7 @@ class Quizzes {
       wronganswer5b =$22
       WHERE id = $23";
       $query_params = array(
-        $updated_quiz->title,
+        $updated_quiz->quiztitle,
       $updated_quiz->category,
       $updated_quiz->question1,
       $updated_quiz->answer1,
