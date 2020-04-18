@@ -73,6 +73,10 @@ else if ($_REQUEST['action'] === 'update'){
     echo json_encode($all_quizzes);
   }
 
+  // else if ($_REQUEST['action'] === 'show'){
+  //       $show_quiz = Quizzes::show($_REQUEST['id']);
+  //       echo json_encode($show_quiz);
+  //   }
 
 
 
