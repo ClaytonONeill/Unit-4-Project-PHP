@@ -113,6 +113,70 @@ class Quizzes {
     }
     return $quizzes;
   }
+  /*===================================================================== */
+
+ //  static function show($id) {
+ //   $showQuiz = [];
+ //   $results = pg_query("SELECT allquizzes*, quiz.id AS quiz_id,
+ //   quiz.quiztitle,
+ //   quiz.location,
+ //   quiz.category,
+ //   quiz.question1,
+ //   quiz.answer1,
+ //   quiz.wronganswer1a,
+ //   quiz.wronganswer1b,
+ //   quiz.question2,
+ //   quiz.answer2,
+ //   quiz.wronganswer2a,
+ //   quiz.wronganswer2b,
+ //   quiz.question3,
+ //   quiz.answer3,
+ //   quiz.wronganswer3a,
+ //   quiz.wronganswer3b,
+ //   quiz.question4,
+ //   quiz.answer4,
+ //   quiz.wronganswer4a,
+ //   quiz.wronganswer4b,
+ //   quiz.question5,
+ //   quiz.answer5,
+ //   quiz.wronganswer5a,
+ //   quiz.wronganswer5b
+ //   $row_object = pg_fetch_object($results);
+ //
+ //   $new_quiz = new Quiz(
+ //     intval($row_object->id),
+ //     $row_object->quiztitle,
+ //     $row_object->category,
+ //     $row_object->question1,
+ //     $row_object->answer1,
+ //     $row_object->wronganswer1a,
+ //     $row_object->wronganswer1b,
+ //     $row_object->question2,
+ //     $row_object->answer2,
+ //     $row_object->wronganswer2a,
+ //     $row_object->wronganswer2b,
+ //     $row_object->question3,
+ //     $row_object->answer3,
+ //     $row_object->wronganswer3a,
+ //     $row_object->wronganswer3b,
+ //     $row_object->question4,
+ //     $row_object->answer4,
+ //     $row_object->wronganswer4a,
+ //     $row_object->wronganswer4b,
+ //     $row_object->question5,
+ //     $row_object->answer5,
+ //     $row_object->wronganswer5a,
+ //     $row_object->wronganswer5b
+ //
+ //   );
+ //
+ //
+ // }
+ //   $showQuiz[] = $new_quiz;
+ //   $row_object = pg_fetch_object($results);
+ //   return $showQuiz;
+ // }
+/*===================================================================== */
 
   static function create($quiz){
     $query = "INSERT INTO allquizzes (quiztitle, category, question1, answer1, wronganswer1a, wronganswer1b, question2, answer2, wronganswer2a, wronganswer2b, question3, answer3, wronganswer3a, wronganswer3b, question4, answer4, wronganswer4a, wronganswer4b, question5, answer5, wronganswer5a, wronganswer5b) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)";
