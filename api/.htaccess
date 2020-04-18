@@ -7,6 +7,9 @@ RewriteEngine On
 RewriteCond %{REQUEST_METHOD} ^GET$
 RewriteRule ^quizzes$ controllers/quizzes.php?action=index
 
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteRule ^quizzes/([0-9]+)$ controllers/quizzes.php?action=show&id=$1
+
 RewriteCond %{REQUEST_METHOD} ^POST$
 RewriteRule ^quizzes$ controllers/quizzes.php?action=post
 
@@ -15,6 +18,3 @@ RewriteRule ^quizzes/([0-9]+)$ controllers/quizzes.php?action=update&id=$1
 
 RewriteCond %{REQUEST_METHOD} ^DELETE$
 RewriteRule ^quizzes/([0-9]+)$ controllers/quizzes.php?action=delete&id=$1
-
-RewriteCond %{REQUEST_METHOD} ^GET$
-RewriteRule ^quizzes/([0-9]+)$ controllers/quizzes.php?action=show&id=$1
