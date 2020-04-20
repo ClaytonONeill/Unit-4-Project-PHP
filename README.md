@@ -16,30 +16,4 @@ Contributors:
 - Max Meacham
 
 
-        "quiztitle": "A",
-        "category": "B",
-        "question1": "C",
-        "answer1": "D",
-        "wronganswer1a": "E",
-        "wronganswer1b": "F",
-        "question2": "G",
-        "answer2": "H",
-        "wronganswer2a": "I",
-        "wronganswer2b": "J",
-        "question3": "K",
-        "answer3": "L",
-        "wronganswer3a": "M",
-        "wronganswer3b": "A",
-        "question4": "Accorn",
-        "answer4": "asdf",
-        "wronganswer4a": "heffe",
-        "wronganswer4b": "boss",
-        "question5": "words?",
-        "answer5": "Roll Fucking Tidee",
-        "wronganswer5a": "Go Vols",
-        "wronganswer5b": "war eagle"
-
-
-, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22
-
-, category, question1, answer1, wronganswer1a, wronganswer1b, question2, answer2, wronganswer2a, wronganswer2b, question3, answer3, wronganswer3a, wronganswer3b, answer4, wronganswer4a, wronganswer4b, question5, answer5, wronganswer5a, wronganswer5b
+Overall this project went very smoothly for our group. The main difficulty we had was syncing up our two repositories with heroku. Once we got the heroku side of the project squared away it was pretty much smooth sailing. We also encountered several issues with the many different body objects that our quizzes hold. We spent a lot of time looking for silly errors because one simple object in one column was misspelled and it would disable a key function of our app.  For example, we called "quiztitle" by the name of "title" on one of the backend lists. It worked fine on the backend but when we tried to test it on React, our update wouldn't work and it took about 2 hours to figure out that the error was actually in the backend. Overall, our group project went very well. 
